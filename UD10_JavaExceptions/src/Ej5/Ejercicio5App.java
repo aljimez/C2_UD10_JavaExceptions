@@ -1,23 +1,27 @@
 package Ej5;
 import java.util.Scanner;
 import java.lang.Math;
-
 public class Ejercicio5App {
-	public static void main(String[] args) {
+   public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
 System.out.println("Introduce el tamaño del array de passwords");
 int tamaño = sc.nextInt();
-int[] passwords = new int[tamaño];
-
-Password pass = new Password(0);    
-   // Password[] passwords = new Password[](tamaño);
+String[] passwords = new String[tamaño];
+Password pass = new Password();    
     System.out.println("Introduce el tamaño de los passwords");
      int tamañopass = sc.nextInt();
-    for (int i = 0; i < passwords.length; i++) {
-       passwords[i] = Password pass = new Password(tamañopass);    
+    passwords = new String[tamañopass];
+    for (int i=0;i<passwords.length;i++){
+      passwords[i] = pass.getContraseña();
+  }
 
+  Boolean[] arrF= new Boolean[tamaño];
+  for (int i = 0; i < arrF.length; i++) {
+      arrF[i]=pass.esFuerte(passwords[i]);
+  System.out.println(arrF[i]+""+arrF[i]);
+   }
     }
-    }
+
 
 
 }

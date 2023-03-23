@@ -4,7 +4,7 @@ public class Password {
 	
     int longitud = 0;
 String contraseña = "";
-    public Password(int longitud) {   
+    public Password() {   
 
     }
 
@@ -28,7 +28,6 @@ for (int i = 0; i < contraseña.length(); i++) {
     int small = 0;  int big = 0; int num = 0;
 if (contraseña.charAt(i)<='z'&& contraseña.charAt(i)>='a') {
     small++;
-
     }
         if (contraseña.charAt(i)<='Z'&& contraseña.charAt(i)>='A') {
             big++;
