@@ -1,6 +1,5 @@
 package Ej5;
 import java.util.Scanner;
-import java.lang.Math;
 public class Ejercicio5App {
    public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
@@ -17,8 +16,12 @@ Password pass = new Password();
 
   Boolean[] arrF= new Boolean[tamaño];
   for (int i = 0; i < arrF.length; i++) {
-      arrF[i]=pass.esFuerte(passwords[i]);
-  System.out.println(arrF[i]+""+arrF[i]);
+    if(Password.esFuerte(passwords[i])){
+
+arrF[i] =true;
+
+    }else arrF[i] = false;
+  System.out.println(passwords[i]+""+arrF[i]);
    }
     }
 

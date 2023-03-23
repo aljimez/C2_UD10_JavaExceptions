@@ -24,11 +24,12 @@ String contraseña = "";
     }
 
     public static boolean esFuerte(String contraseña){
+        boolean res = true;
 for (int i = 0; i < contraseña.length(); i++) {
     int small = 0;  int big = 0; int num = 0;
-if (contraseña.charAt(i)<='z'&& contraseña.charAt(i)>='a') {
-    small++;
-    }
+        if (contraseña.charAt(i)<='z'&& contraseña.charAt(i)>='a') {
+        small++;
+        }
         if (contraseña.charAt(i)<='Z'&& contraseña.charAt(i)>='A') {
             big++;
         }
@@ -37,10 +38,10 @@ if (contraseña.charAt(i)<='z'&& contraseña.charAt(i)>='a') {
             big++;
         }
         if (small > 1 && big > 2 && num > 5) {
-            return true;
-        }else return false;
+             res = true;
+        }else res = false;
 }
-    return false;
+return res;
     }
 
     public static void generarPassword(int longitud) {
