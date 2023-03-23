@@ -1,23 +1,22 @@
 package Ej5;
 import java.util.Random;
 public class Password {
-	
     int longitud = 0;
-String contraseña = "";
+    String contraseña = "";
     public Password() {   
 
     }
+    public void setLongitud (int longitud){
 
+        this.longitud = longitud;
+
+    }
     public int getLongitud (){
 
         return longitud;
     }
 
-    public void setLongitud (){
-
-        this.longitud = longitud;
-
-    }
+    
     public String getContraseña(){
 
         return contraseña;
@@ -44,15 +43,14 @@ for (int i = 0; i < contraseña.length(); i++) {
 return res;
     }
 
-    public static void generarPassword(int longitud) {
+    public static void generarPassword(Password pass) {
         StringBuilder sb = new StringBuilder();
         Random random = new Random();
         final String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        for (int i = 0; i < longitud; i++)
+        for (int i = 0; i <pass.getLongitud() ; i++)
         {
             int randomIndex = random.nextInt(chars.length());
             sb.append(chars.charAt(randomIndex));
-
         }
     }
 
