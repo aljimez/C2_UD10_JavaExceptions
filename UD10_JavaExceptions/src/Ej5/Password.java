@@ -6,6 +6,7 @@ public class Password {
     public Password() {   
 
     }
+    //Construcción de los setters y getters
     public void setLongitud (int longitud){
 
         this.longitud = longitud;
@@ -21,7 +22,19 @@ public class Password {
 
         return contraseña;
     }
+    //Generar una contraseña
+    public static void generarPassword(Password pass) {
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        final String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (int i = 0; i <pass.getLongitud() ; i++)
+        {
+            int randomIndex = random.nextInt(chars.length());
+            sb.append(chars.charAt(randomIndex));
+        }
+    }
 
+//Comprobación de la fortaleza de una contraseña
     public static boolean esFuerte(String contraseña){
         boolean res = true;
 for (int i = 0; i < contraseña.length(); i++) {
@@ -43,16 +56,7 @@ for (int i = 0; i < contraseña.length(); i++) {
 return res;
     }
 
-    public static void generarPassword(Password pass) {
-        StringBuilder sb = new StringBuilder();
-        Random random = new Random();
-        final String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        for (int i = 0; i <pass.getLongitud() ; i++)
-        {
-            int randomIndex = random.nextInt(chars.length());
-            sb.append(chars.charAt(randomIndex));
-        }
-    }
+   
 
 }
     
