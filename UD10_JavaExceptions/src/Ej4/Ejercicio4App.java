@@ -16,33 +16,33 @@ public class Ejercicio4App {
         System.out.println("Introduce el segundo numero a calcular");
         int n2 = sc.nextInt();
         try{  	
-switch (input) {
-case "suma":
-res = n1 + n2;
-break;
-case "resta":
-res = n1 - n2;
-break;
-case "multiplicación":
-res = n1*n2;
-break;
-case "potencia":
-res = n1 ^n2;
-break;
-case "raiz cuadrada":
-rres = Math.sqrt(n1);
-break;
-case "raíz cubica":
-rres = Math.cbrt(n1);
-break;
-case "división":
-res = n1/n2;
-break;
+    switch (input) {
+    case "suma":
+    res = n1 + n2;
+    break;
+    case "resta":
+    res = n1 - n2;
+    break;
+    case "multiplicación":
+    res = n1*n2;
+    break;
+    case "potencia":
+    res = n1 ^n2;
+    break;
+    case "raiz cuadrada":
+    rres = Math.sqrt(n1);
+    break;
+    case "raíz cubica":
+    rres = Math.cbrt(n1);
+    break;
+    case "división":
+    res = n1/n2;
+    break;
+        }
+    }catch(ArithmeticException a){
+
+    System.out.println("Los calculos no han sido hechos correctamente");
+
     }
-}catch(ArithmeticException a){
-
-System.out.println("Los calculos no han sido hechos correctamente");
-
-}
-}
+    }
 }
